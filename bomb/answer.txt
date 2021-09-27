@@ -1,0 +1,37 @@
+Border relations with Canada have never been better.
+1 2 4 8 16 32
+1 311
+1 0
+ionefg
+
+phase1:
+Border relations with Canada have never been better.
+
+phase2:
+1 2 4 8 16 32
+当参数少于7个时， 参数从左到右放入寄存器: rdi, rsi, rdx, rcx, r8, r9。
+当参数为7个以上时， 前 6 个与前面一样， 但后面的依次从 “右向左” 放入栈中，即和32位汇编一样。
+
+phase3:
+1 311
+
+phase4:
+1 0
+第一个数没有仔细看fun4,直接试1发现就可以，第二个数直接告诉你是0
+
+phase5:
+ionefg
+内置了一张表，查表即可,只关注c&0xf,所以好像有多个解
+0x69    0x6f    0x6e    0x65    0x66    0x67
+0x66    0x6c    0x79    0x65    0x72    0x73
+fs0x28的作用：https://stackoverflow.com/questions/10325713/why-does-this-memory-address-fs0x28-fs0x28-have-a-random-value
+
+phase6:
+4 3 2 1 6 5
+
+前两段是说要1<=a[i]<=6且a[i]互不相同,这里主要是小心jbe是无符号比较，所以隐形要求a[i]>=1
+中间一端是说a[i] = 7-a[i]
+后面是有一个链表，链表里面内置了一些权值，要求用a[i]给链表从大到小排序
+
+
+好像还有一个隐藏关卡，不知道怎么进去

@@ -1,0 +1,6 @@
+*.tar
+*.out
+.vscode
+.gdb_history
+*.s
+*.o
